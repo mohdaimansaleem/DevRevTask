@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>DevTravels</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+
+  <!--Navbar starts-->
+  <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="/templates/home.html">DevTravels</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="/templates/home.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/templates/mybookings.html">My Bookings</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Log Out</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!--navbar ends-->
+
+
+  <div class="container" style="display: flex; flex-direction: row;">
+
+    <!--Gif Starts-->
+    <div class="left">
+      <img src="/assets/leftGif.gif" alt="Gif of aeroplane" srcset="">
+    </div>
+    <!--Gif ends-->
+    <!--Bookinig container Starts-->
+    <div class="right">
+      <div class="bookFlight">
+        <form>
+          <input type="text" id="source" placeholder="Enter source" />
+          <input type="text" id="source" placeholder="Enter destination" />
+          <input type="date" id="date" placeholder="Enter date" />
+          <p class="text-center text-success" id="warning"></p>
+
+          <input type="button" class="button" id="findFlight" value="Find Flight" />
+
+          <a href="/templates/admin.html">admin door</a>
+        </form>
+      </div>
+    </div>
+  </div>
+  <!--Booking Container Ends-->
+  </div>
+
+
+  <!--Search Result starts-->
+  <!--show results when searched-->
+  <div class="searchResult" style="display: none;">
+    <div class="datatables">
+      <div class="box">
+        <!-- DataTales Example -->
+        <div class="width card shadow-lg mb-4">
+          <div class="card-header py-3">
+            <h6 class="m-0 font-weight-bold text-primary">Search Result :</h6>
+          </div>
+          <div class="card-body">
+            <div class="table-responsive">
+              <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                <thead>
+                  <tr>
+
+                    <th>Flight Id</th>
+                    <th>Source</th>
+                    <th>Destination</th>
+                    <th>Time</th>
+                    <th>Price</th>
+                    <th>Book</th>
+                  </tr>
+                </thead>
+                <tfoot>
+                  <tr>
+
+                    <th>Flight Id</th>
+                    <th>Source</th>
+                    <th>Destination</th>
+                    <th>Time</th>
+                    <th>Price</th>
+                    <th>Book</th>
+                  </tr>
+                </tfoot>
+                <tbody id="flights">
+                  <!-- <tr>
+                               <td>Date</td>
+                               <td>Status</td>
+                               <td>Location</td>
+                               <td>Action</td>
+                           </tr> -->
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!--Search Result Ends-->
+
+  <!--Top Travels Starts-->
+
+  <h2>Top Travels In India :</h2>
+  <div class="box">
+    <div class="card" style="width: 18rem;">
+      <img src="/assets/delhi.jpg" class="card-img-top" alt="delhi image" style="height: 200px;">
+      <div class="card-body">
+        <p class="card-text">Experience the vibrant blend of history, culture, and modernity in the heart of India with
+          Delhi tourism.</p>
+      </div>
+    </div>
+
+    <div class="card" style="width: 18rem;">
+      <img src="/assets/hyderabad.jpg" class="card-img-top" alt="hyderabad image" style="height: 200px;">
+      <div class="card-body">
+        <p class="card-text">"Embark on a captivating journey to Hyderabad, where tradition meets technology. Explore
+          ancient forts, taste delectable biryanis.</p>
+      </div>
+    </div>
+
+
+    <div class="card" style="width: 18rem;">
+      <img src="/assets/goa.webp" class="card-img-top" alt="goa image" style="height: 200px;">
+      <div class="card-body">
+        <p class="card-text">Escape to paradise on the sun-kissed shores of Goa. With its pristine beaches, vibrant
+          nightlife,water sports.</p>
+      </div>
+    </div>
+
+    <div class="card" style="width: 18rem;">
+      <img src="/assets/agra.jpg" class="card-img-top" alt="agra image" style="height: 200px;">
+      <div class="card-body">
+        <p class="card-text">Journey to Agra and witness the eternal beauty of the Taj Mahal, a UNESCO World Heritage
+          site. Explore the rich Mughal history.</p>
+      </div>
+    </div>
+
+    <div class="card" style="width: 18rem;">
+      <img src="/assets/varanasi.jpg" class="card-img-top" alt="varanasi image" style="height: 200px;">
+      <div class="card-body">
+        <p class="card-text">Experience the spiritual soul of India in Varanasi, where ancient traditions and sacred
+          rituals unfold along the banks of River Ganga.</p>
+      </div>
+    </div>
+  </div>
+  <!--Top Travels Ends-->
+
+  <!--footer starts-->
+  <footer>
+    <center>
+      <p>
+        Mohd Aiman Saleem |
+        DevRev &copy; 2023
+      </p>
+
+    </center>
+  </footer>
+  <!--footer ends-->
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>
